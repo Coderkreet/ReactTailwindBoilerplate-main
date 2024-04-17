@@ -18,46 +18,44 @@ const FifthPage = ({increaseProgress}) => {
 
 
   return (
-    <div>
-            {showSecoundPage ? (
-        <Lastpage/>
-      ) : (
- 
-    <div className='flex flex-col justify-center items-center'>
-        
-    
-
-    <div className="flex  items-center justify-center bg-white">
-
-<div>
-    <img src={image1} alt="Image" width={400} height={400}/>
-   </div>
-    <div className='flex flex-col w-[40rem]'>
-                 <h2 className="text-4xl font-semibold mb-2">You're on your way!</h2>
-                 <p>⭐⭐⭐⭐⭐</p>
-        <p className="text-gray-600 text-[1rem] mb-3">"Through its engaging and well-structured courses, Brilliant has taught me
-mathematical concepts that I previously struggled to understand. I now' feel
-confident approaching both technical job interviews and real world problem
-solving situations."</p>
-
-<p className='text-gray-400'>— Jacob S.</p>
-
+    <div className="flex flex-col items-center justify-center min-h-screen">
+    {showSecoundPage ? (
+      <Lastpage />
+    ) : (
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+        <div className="flex flex-col items-center justify-center bg-white">
+          <div className="w-full max-w-md mx-auto">
+            <img src={image1} alt="Image" className="w-full h-auto" />
+          </div>
+          <div className="w-full max-w-2xl p-4">
+            <h2 className="text-2xl font-semibold mb-2 sm:text-3xl md:text-4xl">
+              You're on your way!
+            </h2>
+            <p className="text-xl">⭐⭐⭐⭐⭐</p>
+            <p className="text-gray-600 mb-3">
+              "Through its engaging and well-structured courses, Brilliant has taught me
+              mathematical concepts that I previously struggled to understand. I now feel
+              confident approaching both technical job interviews and real-world problem
+              solving situations."
+            </p>
+            <p className="text-gray-400">— Jacob S.</p>
+          </div>
         </div>
- 
-    </div>
-    
-    <div onClick={increaseProgress}> 
-         <button    onClick={handleSubmit}
-              type="submit"
-              className={`mt-4 px-4 py-2 bg-black text-white rounded-md hover:bg-black`}>
-              Continue
-            </button>
-    </div>
- 
-  
-    </div>
-)}
-    </div>
+        <div className="mt-4">
+          <div onClick={increaseProgress}>
+               <button
+            onClick={handleSubmit}
+            type="submit"
+            className="px-4 py-2 text-white bg-black rounded-md hover:bg-black"
+          >
+            Continue
+          </button>
+          </div>
+       
+        </div>
+      </div>
+    )}
+  </div>
   );
 };
 
